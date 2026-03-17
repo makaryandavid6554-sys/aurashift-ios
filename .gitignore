@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+
+# Local tooling
+.codex/
+.git_backup_broken/
+
+# Xcode
+.build/
+DerivedData/
+.derivedData/
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcuserstate
+xcuserdata/
+*.xcuserdatad
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+
+# CocoaPods
+Pods/
+
+# Fastlane / archives / symbols
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+*.ipa
+*.dSYM
+
+# Generated app outputs
+output/
+tmp/

@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63050EDD2F564320009BE183 /* README_ru.md in Resources */ = {isa = PBXBuildFile; fileRef = 63050EDC2F564320009BE183 /* README_ru.md */; };
+		63050EDF2F5644A6009BE183 /* FULL_FUNCTIONALITY_ru.md in Resources */ = {isa = PBXBuildFile; fileRef = 63050EDE2F5644A6009BE183 /* FULL_FUNCTIONALITY_ru.md */; };
+		63050EE12F5645ED009BE183 /* DOCUMENTATION_ru.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63050EE02F5645ED009BE183 /* DOCUMENTATION_ru.txt */; };
+		631A89DD2F51AF0600D7CFAC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631A89DC2F51AF0600D7CFAC /* WidgetKit.framework */; };
+		631A89DF2F51AF0600D7CFAC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631A89DE2F51AF0600D7CFAC /* SwiftUI.framework */; };
+		631A89EE2F51AF0800D7CFAC /* AuraShiftWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 631A89DA2F51AF0600D7CFAC /* AuraShiftWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		639EB54C2F5080E500F9ABD6 /* Income+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639EB54B2F5080E500F9ABD6 /* Income+CoreDataProperties.swift */; };
+		639EB54D2F5080E500F9ABD6 /* Income+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639EB54A2F5080E500F9ABD6 /* Income+CoreDataClass.swift */; };
+		63B5DAF42F4EEB8F00E16ECC /* FinancialGoal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5DAEA2F4E1E6900E16ECC /* FinancialGoal+CoreDataProperties.swift */; };
+		63B5DAF52F4EEB8F00E16ECC /* FinancialGoal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B5DAE92F4E1E6900E16ECC /* FinancialGoal+CoreDataClass.swift */; };
+		63C586092F5602F100DAF504 /* BarevLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C586082F5602F100DAF504 /* BarevLoadingView.swift */; };
+		63FA9EA22F586C3700FE9D34 /* FULL_RESTORE_AFTER_DEV_ACCOUNT.md in Resources */ = {isa = PBXBuildFile; fileRef = 63FA9EA12F586C3700FE9D34 /* FULL_RESTORE_AFTER_DEV_ACCOUNT.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		631A89EC2F51AF0800D7CFAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 632E14202F4E1600008E8B58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 631A89D92F51AF0600D7CFAC;
+			remoteInfo = AuraShiftWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		631A89F32F51AF0800D7CFAC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				631A89EE2F51AF0800D7CFAC /* AuraShiftWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		63050EDC2F564320009BE183 /* README_ru.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_ru.md; sourceTree = "<group>"; };
+		63050EDE2F5644A6009BE183 /* FULL_FUNCTIONALITY_ru.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FULL_FUNCTIONALITY_ru.md; sourceTree = "<group>"; };
+		63050EE02F5645ED009BE183 /* DOCUMENTATION_ru.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DOCUMENTATION_ru.txt; sourceTree = "<group>"; };
+		631A89DA2F51AF0600D7CFAC /* AuraShiftWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AuraShiftWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		631A89DC2F51AF0600D7CFAC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		631A89DE2F51AF0600D7CFAC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		631A89F52F51B2AC00D7CFAC /* AuraShiftWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuraShiftWidgetExtension.entitlements; sourceTree = "<group>"; };
+		632E14282F4E1600008E8B58 /* AuraShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuraShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		639EB54A2F5080E500F9ABD6 /* Income+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Income+CoreDataClass.swift"; sourceTree = "<group>"; };
+		639EB54B2F5080E500F9ABD6 /* Income+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Income+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		63B5DAE92F4E1E6900E16ECC /* FinancialGoal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinancialGoal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		63B5DAEA2F4E1E6900E16ECC /* FinancialGoal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinancialGoal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		63C586082F5602F100DAF504 /* BarevLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarevLoadingView.swift; sourceTree = "<group>"; };
+		63FA9EA12F586C3700FE9D34 /* FULL_RESTORE_AFTER_DEV_ACCOUNT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = FULL_RESTORE_AFTER_DEV_ACCOUNT.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		631A89E02F51AF0600D7CFAC /* AuraShiftWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AuraShiftWidget;
+			sourceTree = "<group>";
+		};
+		632E142A2F4E1600008E8B58 /* AuraShift */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AuraShift;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		631A89D72F51AF0600D7CFAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631A89DF2F51AF0600D7CFAC /* SwiftUI.framework in Frameworks */,
+				631A89DD2F51AF0600D7CFAC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632E14252F4E1600008E8B58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		631A89DB2F51AF0600D7CFAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				631A89DC2F51AF0600D7CFAC /* WidgetKit.framework */,
+				631A89DE2F51AF0600D7CFAC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		632E141F2F4E1600008E8B58 = {
+			isa = PBXGroup;
+			children = (
+				631A89F52F51B2AC00D7CFAC /* AuraShiftWidgetExtension.entitlements */,
+				639EB54A2F5080E500F9ABD6 /* Income+CoreDataClass.swift */,
+				639EB54B2F5080E500F9ABD6 /* Income+CoreDataProperties.swift */,
+				63B5DAE92F4E1E6900E16ECC /* FinancialGoal+CoreDataClass.swift */,
+				63B5DAEA2F4E1E6900E16ECC /* FinancialGoal+CoreDataProperties.swift */,
+				632E142A2F4E1600008E8B58 /* AuraShift */,
+				631A89E02F51AF0600D7CFAC /* AuraShiftWidget */,
+				631A89DB2F51AF0600D7CFAC /* Frameworks */,
+				632E14292F4E1600008E8B58 /* Products */,
+				63C586082F5602F100DAF504 /* BarevLoadingView.swift */,
+				63050EDC2F564320009BE183 /* README_ru.md */,
+				63050EDE2F5644A6009BE183 /* FULL_FUNCTIONALITY_ru.md */,
+				63050EE02F5645ED009BE183 /* DOCUMENTATION_ru.txt */,
+				63FA9EA12F586C3700FE9D34 /* FULL_RESTORE_AFTER_DEV_ACCOUNT.md */,
+			);
+			sourceTree = "<group>";
+		};
+		632E14292F4E1600008E8B58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				632E14282F4E1600008E8B58 /* AuraShift.app */,
+				631A89DA2F51AF0600D7CFAC /* AuraShiftWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		631A89D92F51AF0600D7CFAC /* AuraShiftWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631A89F02F51AF0800D7CFAC /* Build configuration list for PBXNativeTarget "AuraShiftWidgetExtension" */;
+			buildPhases = (
+				631A89D62F51AF0600D7CFAC /* Sources */,
+				631A89D72F51AF0600D7CFAC /* Frameworks */,
+				631A89D82F51AF0600D7CFAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				631A89E02F51AF0600D7CFAC /* AuraShiftWidget */,
+			);
+			name = AuraShiftWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = AuraShiftWidgetExtension;
+			productReference = 631A89DA2F51AF0600D7CFAC /* AuraShiftWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		632E14272F4E1600008E8B58 /* AuraShift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 632E14382F4E1602008E8B58 /* Build configuration list for PBXNativeTarget "AuraShift" */;
+			buildPhases = (
+				632E14242F4E1600008E8B58 /* Sources */,
+				632E14252F4E1600008E8B58 /* Frameworks */,
+				632E14262F4E1600008E8B58 /* Resources */,
+				631A89F32F51AF0800D7CFAC /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				631A89ED2F51AF0800D7CFAC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				632E142A2F4E1600008E8B58 /* AuraShift */,
+			);
+			name = AuraShift;
+			packageProductDependencies = (
+			);
+			productName = AuraShift;
+			productReference = 632E14282F4E1600008E8B58 /* AuraShift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		632E14202F4E1600008E8B58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					631A89D92F51AF0600D7CFAC = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					632E14272F4E1600008E8B58 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 632E14232F4E1600008E8B58 /* Build configuration list for PBXProject "AuraShift" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+				hy,
+				uk,
+				kk,
+				uz,
+			);
+			mainGroup = 632E141F2F4E1600008E8B58;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 632E14292F4E1600008E8B58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				632E14272F4E1600008E8B58 /* AuraShift */,
+				631A89D92F51AF0600D7CFAC /* AuraShiftWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		631A89D82F51AF0600D7CFAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632E14262F4E1600008E8B58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63050EE12F5645ED009BE183 /* DOCUMENTATION_ru.txt in Resources */,
+				63050EDF2F5644A6009BE183 /* FULL_FUNCTIONALITY_ru.md in Resources */,
+				63FA9EA22F586C3700FE9D34 /* FULL_RESTORE_AFTER_DEV_ACCOUNT.md in Resources */,
+				63050EDD2F564320009BE183 /* README_ru.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		631A89D62F51AF0600D7CFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632E14242F4E1600008E8B58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639EB54C2F5080E500F9ABD6 /* Income+CoreDataProperties.swift in Sources */,
+				63C586092F5602F100DAF504 /* BarevLoadingView.swift in Sources */,
+				639EB54D2F5080E500F9ABD6 /* Income+CoreDataClass.swift in Sources */,
+				63B5DAF42F4EEB8F00E16ECC /* FinancialGoal+CoreDataProperties.swift in Sources */,
+				63B5DAF52F4EEB8F00E16ECC /* FinancialGoal+CoreDataClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		631A89ED2F51AF0800D7CFAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 631A89D92F51AF0600D7CFAC /* AuraShiftWidgetExtension */;
+			targetProxy = 631A89EC2F51AF0800D7CFAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		631A89F12F51AF0800D7CFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AuraShiftWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/WidgetInfo.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuraShiftWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "D-D.AuraShift.AuraShiftWidget";
+				PRODUCT_NAME = AuraShiftWidgetExtension;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		631A89F22F51AF0800D7CFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AuraShiftWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/WidgetInfo.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuraShiftWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "D-D.AuraShift.AuraShiftWidget";
+				PRODUCT_NAME = AuraShiftWidgetExtension;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		632E14362F4E1602008E8B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		632E14372F4E1602008E8B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		632E14392F4E1602008E8B58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AuraShift/AuraShift.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuraShift;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "D-D.AuraShift";
+				PRODUCT_NAME = AuraShift;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		632E143A2F4E1602008E8B58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AuraShift/AuraShift.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Config/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuraShift;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "D-D.AuraShift";
+				PRODUCT_NAME = AuraShift;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		631A89F02F51AF0800D7CFAC /* Build configuration list for PBXNativeTarget "AuraShiftWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631A89F12F51AF0800D7CFAC /* Debug */,
+				631A89F22F51AF0800D7CFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		632E14232F4E1600008E8B58 /* Build configuration list for PBXProject "AuraShift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632E14362F4E1602008E8B58 /* Debug */,
+				632E14372F4E1602008E8B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		632E14382F4E1602008E8B58 /* Build configuration list for PBXNativeTarget "AuraShift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632E14392F4E1602008E8B58 /* Debug */,
+				632E143A2F4E1602008E8B58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 632E14202F4E1600008E8B58 /* Project object */;
+}

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2100" viewBox="0 0 1400 2100">
+  <defs>
+    <style>
+      .title { font: 700 30px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; fill: #10212b; }
+      .sub { font: 500 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; fill: #334e5a; }
+      .boxTitle { font: 700 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; fill: #0d1f2e; }
+      .boxText { font: 500 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; fill: #18323e; }
+      .formula { font: 600 17px 'SF Mono', Menlo, Consolas, monospace; fill: #0f2f45; }
+      .note { font: 500 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; fill: #45616f; }
+      .small { font: 600 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; fill: #375867; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#355b6d" />
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="2100" fill="#f3f8fb"/>
+  <rect x="40" y="40" width="1320" height="2020" rx="24" fill="#ffffff" stroke="#d5e4ec"/>
+
+  <text x="700" y="95" text-anchor="middle" class="title">Структура ML-алгоритма: текущий месяц vs прошлый месяц</text>
+  <text x="700" y="125" text-anchor="middle" class="sub">Текущая реализация из AIEngine.swift (plannedShiftWindowComparison)</text>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="170" width="1160" height="130" rx="16" fill="#eaf5fb" stroke="#bfdceb"/>
+    <rect x="120" y="340" width="1160" height="160" rx="16" fill="#eef9f0" stroke="#c7e8cf"/>
+    <rect x="120" y="540" width="1160" height="170" rx="16" fill="#f9f6eb" stroke="#eadcb0"/>
+    <rect x="120" y="750" width="1160" height="170" rx="16" fill="#f2f0fb" stroke="#d9d0f3"/>
+    <rect x="120" y="960" width="1160" height="170" rx="16" fill="#eaf5fb" stroke="#bfdceb"/>
+    <rect x="120" y="1170" width="1160" height="170" rx="16" fill="#eef9f0" stroke="#c7e8cf"/>
+    <rect x="120" y="1380" width="1160" height="190" rx="16" fill="#f9f6eb" stroke="#eadcb0"/>
+    <rect x="120" y="1610" width="1160" height="190" rx="16" fill="#f2f0fb" stroke="#d9d0f3"/>
+  </g>
+
+  <text x="150" y="205" class="boxTitle">1) Входные данные</text>
+  <text x="150" y="235" class="boxText">- iSnaps: фактические смены с доходом (включая чаевые) за прошлые периоды</text>
+  <text x="150" y="261" class="boxText">- plannedShifts: будущие запланированные смены в текущем месяце</text>
+  <text x="150" y="287" class="boxText">- activeWorkTypes + внешние факторы (погода, праздники, holidayRegionCode)</text>
+
+  <text x="150" y="375" class="boxTitle">2) Проверка достаточности данных</text>
+  <text x="150" y="405" class="boxText">- Нужно минимум 3 запланированные смены в текущем месяце</text>
+  <text x="150" y="431" class="boxText">- Нужно минимум 3 фактические смены в прошлом месяце</text>
+  <text x="150" y="457" class="boxText">- Окно динамическое: от 3 до 14 смен; иначе сравнение отключается</text>
+  <text x="150" y="483" class="small">(hasComparison = false, в UI показывается "Недостаточно данных")</text>
+
+  <text x="150" y="575" class="boxTitle">3) База из прошлого месяца</text>
+  <text x="150" y="605" class="boxText">- Берется сопоставимое окно последних смен прошлого месяца</text>
+  <text x="150" y="631" class="boxText">- Считаются totals: доход, чаевые, base (доход - чаевые)</text>
+  <text x="150" y="657" class="boxText">- Строится профиль по дням недели: средний доход, доля чаевых, частота чаевых</text>
+  <text x="150" y="683" class="small">globalTipRatio + weekdayTipRatio + weekdayTipPresence</text>
+
+  <text x="150" y="785" class="boxTitle">4) Тренд чаевых</text>
+  <text x="150" y="815" class="boxText">- Используется история до текущего месяца (до 120 последних смен)</text>
+  <text x="150" y="841" class="boxText">- Считаются скользящие средние: tipRatioMA и tipPresenceMA</text>
+  <text x="150" y="867" class="boxText">- Линейный slope по последним точкам -> тренд на горизонт окна прогноза</text>
+  <text x="150" y="893" class="small">trendTipRatio и trendTipPresence ограничиваются (clamp) для устойчивости</text>
+
+  <text x="150" y="995" class="boxTitle">5) Прогноз по каждой плановой смене</text>
+  <text x="150" y="1025" class="boxText">- Base доход считается из типа смены (почасовая/фикс + длительность)</text>
+  <text x="150" y="1051" class="boxText">- Чаевые = смесь weekday-сигнала, тренда и глобального сигнала</text>
+  <text x="150" y="1077" class="boxText">- Если у смены без чаевых: tip-компоненты = 0</text>
+  <text x="150" y="1103" class="small">predictedIncome = base * baseMultiplier + predictedTips</text>
+
+  <text x="150" y="1205" class="boxTitle">6) Внешние факторы (если включены)</text>
+  <text x="150" y="1235" class="boxText">- Погода может повышать/снижать ожидаемую долю чаевых</text>
+  <text x="150" y="1261" class="boxText">- Неблагоприятные погодные аномалии уменьшают ожидаемую доходность</text>
+  <text x="150" y="1287" class="boxText">- Праздники (holidayRegionCode) корректируют базу и чаевые</text>
+  <text x="150" y="1313" class="small">Множители ограничиваются, чтобы не было выбросов</text>
+
+  <text x="150" y="1415" class="boxTitle">7) Агрегация и сравнение</text>
+  <text x="150" y="1445" class="boxText">- comparablePastTotal = сопоставимый профиль прошлого месяца</text>
+  <text x="150" y="1471" class="boxText">- futurePredictedTotal = сумма прогнозов по плановым сменам</text>
+  <text x="150" y="1497" class="boxText">- Оба переводятся в среднее на смену: avgPast и avgFutureAdjusted</text>
+  <text x="150" y="1523" class="formula">changePercent = ((avgFutureAdjusted - avgPast) / max(avgPast, 0.0001)) * 100</text>
+  <text x="150" y="1549" class="small">Результат сохраняется в forecastEndMonthChange</text>
+
+  <text x="150" y="1645" class="boxTitle">8) Что означает результат в UI</text>
+  <text x="150" y="1675" class="boxText">- changePercent &gt; 0  -> ожидается доход выше прошлого полного месяца</text>
+  <text x="150" y="1701" class="boxText">- changePercent &lt; 0  -> ожидается доход ниже прошлого полного месяца</text>
+  <text x="150" y="1727" class="boxText">- Это знаковое процентное отклонение, а не вероятность P(рост/падение)</text>
+  <text x="150" y="1753" class="boxText">- hasForecastEndComparison определяет: число показывать или fallback-текст</text>
+
+  <line x1="700" y1="300" x2="700" y2="332" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="700" y1="500" x2="700" y2="532" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="700" y1="710" x2="700" y2="742" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="700" y1="920" x2="700" y2="952" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="700" y1="1130" x2="700" y2="1162" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="700" y1="1340" x2="700" y2="1372" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="700" y1="1570" x2="700" y2="1602" stroke="#355b6d" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="980" y="1660" width="250" height="36" rx="18" fill="#ddf3df" stroke="#9ed2a5"/>
+  <text x="1105" y="1684" text-anchor="middle" class="small" fill="#1f6a2f">Плюс: выше прошлого месяца</text>
+  <rect x="980" y="1708" width="250" height="36" rx="18" fill="#fde6e6" stroke="#e8b0b0"/>
+  <text x="1105" y="1732" text-anchor="middle" class="small" fill="#8c2f2f">Минус: ниже прошлого месяца</text>
+
+  <text x="700" y="2025" text-anchor="middle" class="note">Источник: AIEngine.swift (buildForecast + plannedShiftWindowComparison), AIAdvisorView.swift</text>
+</svg>
