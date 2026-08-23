@@ -3,6 +3,7 @@
 ## Now
 - Use legacy AuraShift / MoneyTracker as the primary UX blueprint for the next product steps without copying code or rewriting the new app.
 - Deliver the Today + Calendar operational workflow as one complete milestone: selected day, month context, anchored day popover, day summary, shift preview, and fast shift creation.
+- Add the adaptive semantic theme foundation with Light/Dark support and curated Citron, Graphite, Emerald, Cobalt, and Signal Orange accents.
 - Verify the milestone across Dashboard, Calendar, and Shifts with focused tests, one build, and one runtime QA pass.
 - Preserve `AuroraSummaryShaper` as deterministic, local, non-AI output.
 - Keep documentation consolidated around the canonical docs listed in `docs/README.md`.
@@ -30,6 +31,7 @@
 - Deterministic trend insight expansion.
 - AI service boundary design and mock recommendation flows.
 - QA expansion, tests, and release preparation.
+- Arbitrary RGB/hex accent creation only if curated presets do not cover real user needs.
 
 ## Rejected / Risky
 - Artificial micro-step development that produces repeated reports without a complete user-facing result.
@@ -40,3 +42,4 @@
 - Repository abstractions before the SwiftData path is complex enough to need them.
 - Premature AI integration without clear service boundaries.
 - Rewriting architecture midstream without explicit approval.
+- Recoloring semantic statuses or every UI surface from one user-selected accent.
