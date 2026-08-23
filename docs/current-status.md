@@ -1,9 +1,9 @@
 # Current Status
 
 ## Current Step
-Accelerated milestone-based development strategy.
+Future visual direction and adaptive color personalization approved.
 
-Development now proceeds through complete user-facing milestones instead of numbered micro-steps. Reports are concise, documentation is updated at milestone or plan-change boundaries, and verification is proportional to the delivered slice. No Swift source, persistence, navigation, or product behavior changed in this documentation-only strategy update.
+The approved direction combines premium banking hierarchy, a month-first calendar, ring-led analytics, system Light/Dark appearance, and curated user-selectable accent colors. No Swift source, persistence, navigation, or product behavior changed in this documentation-only plan update.
 
 ## Current Product State
 - AuraShift is a SwiftUI iOS app for shift-aware personal statistics, operational planning, trend context, and future AI-assisted recommendations.
@@ -20,6 +20,7 @@ Development now proceeds through complete user-facing milestones instead of numb
 - The top-level shell now has explicit tab metadata/selection and calmer shared tab/navigation chrome.
 - Dashboard has a narrow Today/Daily persisted-shift summary. Statistics still has a narrow current-week persisted-shift summary plus fallback/mock-backed broader content.
 - Deterministic local summary copy exists through `AuroraSummaryShaper`; it is not AI.
+- The future adaptive color system is now defined at the product level: semantic Light/Dark tokens plus curated Citron, Graphite, Emerald, Cobalt, and Signal Orange accents. It is not implemented yet.
 
 ## Canonical Documentation State
 - `docs/README.md` now defines the canonical app-repo documentation set and source-of-truth rule.
@@ -43,6 +44,7 @@ Development now proceeds through complete user-facing milestones instead of numb
 - Statistics consumes only narrow persisted-derived current-week shift summaries; broader analytics remain deferred.
 
 ## Tests / Verification Status
+- No build or tests were run for the adaptive color plan update because only canonical documentation changed.
 - No build or tests were run for the accelerated-strategy update because only canonical documentation changed.
 - Latest build verification: `./scripts/build-local.sh` succeeded on 2026-05-25 after adding the Dashboard quick action.
 - Latest full test verification: `./scripts/test-local.sh` succeeded on 2026-05-25 with 57 tests passing after adding the Dashboard quick action.
@@ -61,4 +63,4 @@ Development now proceeds through complete user-facing milestones instead of numb
 - `Use last shift values` treats "last" as the persisted record with the latest `startDate`, not the most recently created record.
 
 ## Next Recommended Step
-Deliver the Today + Calendar operational workflow as one coherent milestone, then run focused tests, a build, and one cross-surface runtime QA pass.
+Deliver the Today + Calendar workflow and adaptive semantic color foundation as one coherent milestone, then run focused tests, a build, and one cross-surface Light/Dark/accent QA pass.
