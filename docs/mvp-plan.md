@@ -41,11 +41,13 @@ The current MVP is not a throwaway demo. It should remain small, testable, and p
 - Dashboard presents an honest Today/Daily persisted-shift summary plus a shift-only add action, and Statistics presents an honest current-week persisted-shift summary without implying real charts, broad analytics, or AI.
 - Local SwiftData persistence survives relaunch for created/edited/deleted shifts.
 - Premium UI direction is consistent across Dashboard, Statistics, Calendar, and Shifts.
+- Light and Dark mode work with the curated AuraShift accent presets without hardcoded theme colors or broken semantic contrast.
 - Manual runtime QA is completed across empty, in-week, out-of-week, and multi-shift states.
 - Known limitations are explicit and not hidden by copy or polish.
 
 ## Next MVP Work
 - Complete the Today + Calendar operational workflow as one milestone: selected day, anchored day popover, useful day summary, shift preview, and fast shift creation through the existing SwiftData path.
+- Establish semantic theme tokens and curated accent selection as part of that milestone so Today, Calendar, Shifts, navigation, and later Statistics share one adaptive color system.
 - Stabilize the resulting cross-surface flow across Dashboard, Calendar, and Shifts with focused automated checks and one runtime QA pass.
 - Add quick-action structure incrementally: shift first, then expense/income/event only after the data model and UX boundaries are explicitly defined.
 - Upgrade Statistics from narrow stored-shift metrics toward legacy-style rings and financial analytics only after income/expense models exist.
@@ -59,3 +61,4 @@ The current MVP is not a throwaway demo. It should remain small, testable, and p
 - Search, saved filters, bulk operations, undo, archive, recovery, or complex list management.
 - Broad Dashboard/Statistics analytics, charts, graphs, trends, recommendations, goals, or persisted analytical entities until the transaction/financial domain is introduced deliberately.
 - Repository abstractions, migration policy, or broader storage architecture before the SwiftData path requires it.
+- Arbitrary RGB/hex theme editing, per-screen palettes, and user-authored color systems.
